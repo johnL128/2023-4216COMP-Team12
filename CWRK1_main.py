@@ -1,6 +1,4 @@
 import pandas as pd
-import matplotlib as plt
-import csv
 
 #display data from csv
 df = pd.read_csv("")
