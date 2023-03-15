@@ -2,4 +2,4 @@
 Computer Science Workshop Coursework
 
 Menu:
-<DESCRIPTION ON MENU>
+DESCRIPTION OF MENU
