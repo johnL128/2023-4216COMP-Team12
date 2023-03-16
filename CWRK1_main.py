@@ -1,6 +1,6 @@
 import pandas as pd
 
-#display data from csv
+#display data from csv (ensure that import has csv/"file name")
 df = pd.read_csv("")
 
 #EVERYONE'S VISUALISATION
