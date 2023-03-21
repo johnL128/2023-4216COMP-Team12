@@ -20,7 +20,7 @@ while (True):
         exit()
     
     else:
-        print(f"\nCountry doesn't exist within the database or {select_count} isn't a real country")
+        print(f"\nCountry doesn't exist within the database/\"{select_count}\" isn't a real country")
 
 while (True):
     s_year = input("\nEnter a year: ")
@@ -50,10 +50,10 @@ while (True):
 world = w_df.loc[w_df["Country Name"] == select_count, s_year:s_year2]
 ut = ut_df.loc[ut_df["Country Name"] == select_count, s_year:s_year2]
 
-print(f"--- World Data for {select_count} between {s_year}-{s_year2} ---")
-print(world)
-
 print(f"\n--- World Data for {select_count} between {s_year}-{s_year2} ---")
+print(world)
+print(" ")
+print(f"\n--- Urban Total Data for {select_count} between {s_year}-{s_year2} ---")
 print(ut)
 
 #plot both lines on the graph
@@ -61,10 +61,12 @@ fig, ax = plt.subplots()
 line1 = ax.plot(world.columns.T, world.T, color='r')
 line2 = ax.plot(ut.columns.T, ut.T, color='b')
 
-fig.suptitle(f"Data for {select_count} between {s_year}-{s_year2}")
+fig.suptitle(f"World and Urban Total Data for {select_count} between {s_year}-{s_year2}")
 
 w_leg = mpatches.Patch(color='red', label='World Population')
 ut_leg = mpatches.Patch(color='blue', label='Urban Population')
+
+plt.xticks(rotation = (90))
 plt.legend(handles=[w_leg, ut_leg])
 plt.grid()
 plt.show()
