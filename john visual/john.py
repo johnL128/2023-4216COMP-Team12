@@ -1,4 +1,4 @@
-#Countries that have under 50% urban population in a selected year
+#Countries that have under 45% urban population in a selected year
 #import modules
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ while (True):
         print(f"\nInvalid Input: {select_year}")
 
 #import user input into filters
-show_data = urban_df.loc[urban_df[select_year] < 50]
+show_data = urban_df.loc[urban_df[select_year] < 45]
 useful = show_data[["Country Name", "Country Code", select_year]]
 print(useful)
 
