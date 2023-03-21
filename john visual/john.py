@@ -32,7 +32,7 @@ for idx, row in urban_df.iterrows():
 #fig settings
 plt.title(f'Countries that have less than 50% urban population in {select_year}', fontsize=18)
 #set xticks scale
-x = np.random.randint(low=0, high=50, size=50)
+x = np.random.randint(low=0, high=45, size=45)
 plt.xticks(np.arange(0, len(x)+1, 5))
 plt.xlabel("Urban % Population", fontsize=12)
 
