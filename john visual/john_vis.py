@@ -1,4 +1,4 @@
-#Compare a selected country’s urban and world population over a time period
+#Compare a selected country’s urban and rural population over a time period
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
@@ -47,24 +47,24 @@ while (True):
         print(f"\n{s_year} doesn't exist in this database!")
 
 #manipulate both csv files, get data
-world = w_df.loc[w_df["Country Name"] == select_count, s_year:s_year2]
 ut = ut_df.loc[ut_df["Country Name"] == select_count, s_year:s_year2]
+rur = w_df.loc[w_df["Country Name"] == select_count, s_year:s_year2] - ut
 
-print(f"\n--- World Data for {select_count} between {s_year}-{s_year2} ---")
-print(world)
-print(" ")
-print(f"\n--- Urban Total Data for {select_count} between {s_year}-{s_year2} ---")
+print(f"\n--- Urban Data for {select_count} between {s_year}-{s_year2} ---")
 print(ut)
+print(" ")
+print(f"\n--- Rural Total Data for {select_count} between {s_year}-{s_year2} ---")
+print(rur)
 
 #plot both lines on the graph
 fig, ax = plt.subplots()
-line1 = ax.plot(world.columns.T, world.T, color='r')
-line2 = ax.plot(ut.columns.T, ut.T, color='b')
+line1 = ax.plot(ut.columns.T, ut.T, color='r')
+line2 = ax.plot(rur.columns.T, rur.T, color='b')
 
-fig.suptitle(f"World and Urban Total Data for {select_count} between {s_year}-{s_year2}")
+fig.suptitle(f"Urban and Rural Data for {select_count} between {s_year}-{s_year2}")
 
-w_leg = mpatches.Patch(color='red', label='World Population')
-ut_leg = mpatches.Patch(color='blue', label='Urban Population')
+w_leg = mpatches.Patch(color='red', label='Urban Population')
+ut_leg = mpatches.Patch(color='blue', label='Rural Population')
 
 plt.xticks(rotation = (90))
 plt.legend(handles=[w_leg, ut_leg])
