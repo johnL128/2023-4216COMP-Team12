@@ -50,10 +50,10 @@ while (True):
 ut = ut_df.loc[ut_df["Country Name"] == select_count, s_year:s_year2]
 rur = w_df.loc[w_df["Country Name"] == select_count, s_year:s_year2] - ut
 
-print(f"\n--- Urban Data for {select_count} between {s_year}-{s_year2} ---")
+print(f"\n--- Urban Data for {select_count} between {s_year}-{s_year2} ---\n")
 print(ut)
 print(" ")
-print(f"\n--- Rural Total Data for {select_count} between {s_year}-{s_year2} ---")
+print(f"\n--- Rural Total Data for {select_count} between {s_year}-{s_year2} ---\n")
 print(rur)
 
 #plot both lines on the graph
