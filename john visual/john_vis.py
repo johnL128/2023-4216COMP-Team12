@@ -10,7 +10,7 @@ print(f"\n--- Compare a selected country’s urban and world population over a t
 print(f"\n--- Enter \'Q\' to quit the program ---")
 
 while (True):
-    sel = input("\nType in the name of a country: ")
+    sel = input("\nEnter the Country Code: ")
     select_count = sel.title()
     
     if w_df["Country Name"].eq(select_count).any() and ut_df["Country Name"].eq(select_count).any():
@@ -20,7 +20,7 @@ while (True):
         exit()
     
     else:
-        print(f"\nCountry doesn't exist within the database/\"{select_count}\" isn't a real country")
+        print(f"\nCountry Name doesn't exist within the database/\"{select_count}\" isn't a real country")
 
 while (True):
     s_year = input("\nEnter a year: ")
@@ -53,7 +53,7 @@ rur = w_df.loc[w_df["Country Name"] == select_count, s_year:s_year2] - ut
 print(f"\n--- Urban Data for {select_count} between {s_year}-{s_year2} ---\n")
 print(ut)
 print(" ")
-print(f"\n--- Rural Total Data for {select_count} between {s_year}-{s_year2} ---\n")
+print(f"\n--- Rural Data for {select_count} between {s_year}-{s_year2} ---\n")
 print(rur)
 
 #plot both lines on the graph
@@ -62,11 +62,14 @@ line1 = ax.plot(ut.columns.T, ut.T, color='r')
 line2 = ax.plot(rur.columns.T, rur.T, color='b')
 
 fig.suptitle(f"Urban and Rural Data for {select_count} between {s_year}-{s_year2}")
+fig.supxlabel("Years")
+fig.supylabel("Population")
+ax.get_yaxis().get_major_formatter().set_scientific(False)
+plt.xticks(rotation = (90))
 
 w_leg = mpatches.Patch(color='red', label='Urban Population')
 ut_leg = mpatches.Patch(color='blue', label='Rural Population')
-
-plt.xticks(rotation = (90))
 plt.legend(handles=[w_leg, ut_leg])
+
 plt.grid()
 plt.show()
