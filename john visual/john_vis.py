@@ -57,9 +57,9 @@ fig, ax = plt.subplots()
 ax.plot(ut.columns.T, ut.T, color='r')
 ax.plot(rur.columns.T, rur.T, color='b')
 
-fig.suptitle(f"Urban and Rural Data for {cou_name} between {s_year}-{s_year2}")
-fig.supxlabel("Years")
-fig.supylabel("Population")
+fig.suptitle(f"Urban and Rural Data for {cou_name} between {s_year}-{s_year2}", fontsize=20)
+fig.supxlabel("Years", fontsize=20)
+fig.supylabel("Population", fontsize=20)
 ax.get_yaxis().get_major_formatter().set_scientific(False)
 plt.xticks(rotation = (90))
 
