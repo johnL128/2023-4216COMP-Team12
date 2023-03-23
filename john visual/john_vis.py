@@ -30,9 +30,6 @@ while (True):
     if s_year >="1960" and s_year <= "2020":
         break
     
-    elif s_year == "Q" or s_year == "q":
-        exit()
-    
     else:
         print(f"\n{s_year} doesn't exist in this database!")
         
@@ -41,9 +38,6 @@ while (True):
     
     if s_year >= "1960" and s_year <= "2020" and s_year2 != s_year and s_year2 > s_year:
         break
-    
-    elif s_year == "Q" or s_year == "q":
-        exit()
         
     else:
         print(f"\n{s_year} doesn't exist in this database!")
@@ -52,10 +46,10 @@ while (True):
 ut = ut_df.loc[ut_df["Country Code"] == sel_code, s_year:s_year2]
 rur = w_df.loc[w_df["Country Code"] == sel_code, s_year:s_year2] - ut
 
-print(f"\n--- Urban Data for {sel_code} between {s_year}-{s_year2} ---\n")
+print(f"\n--- Urban Data for {cou_name} between {s_year}-{s_year2} ---\n")
 print(ut)
 print(" ")
-print(f"\n--- Rural Data for {sel_code} between {s_year}-{s_year2} ---\n")
+print(f"\n--- Rural Data for {cou_name} between {s_year}-{s_year2} ---\n")
 print(rur)
 
 #plot both lines on the graph
