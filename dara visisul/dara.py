@@ -25,3 +25,5 @@ else:
 Country = data.loc[data["Country Name"] == x, y:z]
 print (Country)
 
+Country.plot(kind='bar')
+plt.show()
