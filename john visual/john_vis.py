@@ -54,8 +54,8 @@ print(rur)
 
 #plot both lines on the graph
 fig, ax = plt.subplots()
-ax.plot(ut.columns.T, ut.T, color='r')
-ax.plot(rur.columns.T, rur.T, color='b')
+ax.plot(ut.columns.T, ut.values.T, color='r')
+ax.plot(rur.columns.T, rur.values.T, color='b')
 
 fig.suptitle(f"Urban and Rural Data for {cou_name} between {s_year}-{s_year2}", fontsize=20)
 fig.supxlabel("Years", fontsize=20)
