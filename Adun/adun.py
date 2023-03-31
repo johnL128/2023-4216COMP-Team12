@@ -12,6 +12,8 @@ while (True):
     if df["Country Name"].eq(n).any():
         print(f"1st Chosen county: {n}")
         break
+    elif n == 'Q':
+        exit()
     else:
         print("Please choose another country")
 
