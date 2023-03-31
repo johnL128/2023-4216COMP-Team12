@@ -49,8 +49,8 @@ print(b)
 
 fig, ax = plt.subplots()
 ax.get_yaxis().get_major_formatter().set_scientific(False)
-ax.plot(a.columns.T, a.values.T, label = n)
-ax.plot(b.columns.T, b.values.T, label = o)
+ax.plot(a.columns.T, a.values.T, label = n, color = 'black')
+ax.plot(b.columns.T, b.values.T, label = o, color = 'red')
 
 fig.suptitle(f"Total Population for {n} and {o} between {x} and {y}", fontsize = 20)
 ax.set_xlabel("Years", fontsize = 14)
@@ -59,7 +59,6 @@ ax.set_ylabel("Population", fontsize = 14)
 ax.xaxis.grid()
 ax.yaxis.grid()
 
-ax.legend(title="Key")
 ax.legend(loc="upper right")
 
 plt.show()
