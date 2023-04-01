@@ -1,5 +1,5 @@
 # Computer Science Workshop: 2023-4216COMP-Team12
-Project Name: Data Visualisation of Urban/World Populations
+**Project: Data Visualisation of Urban/World Populations**
 
 ## Menu
 When the program is run, the user is greeted with a menu in which they will be given a select number of choices to choose from.
