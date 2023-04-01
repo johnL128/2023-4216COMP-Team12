@@ -5,6 +5,37 @@ import matplotlib.patches as mpatches
 #display data from csv (ensure that import has csv/"file name")
 
 #EVERYONE'S VISUALISATION BELOW
+#Chinells's Visualisation
+
+
+
+
+
+
+
+
+
+#Dara's Visualisation
+
+
+
+
+
+
+
+
+
+#Adina's Visualisation
+
+
+
+
+
+
+
+
+
+
 #Adun's Visualisation
 def comparingCountries():
 
@@ -71,6 +102,10 @@ def comparingCountries():
     ax.legend(loc="upper right") # puts the legend of the graph at the upper right of the graph
 
     plt.show()
+
+
+
+#Ella's Visualisation
 
 
 
@@ -191,27 +226,33 @@ def compareUrbanRural():
 #main menu
 #for some reason python 3.9 doesnt have a switch case option, needs python 3.10
 while (True):
-    print("\n-----Menu-----\nSelect one of the choices to see a visualisation:\n")
-    choice = input("1 - Visual\n2 - Visual2\n3 - Visual3\n4 - Compare two countries total population over a time period.\n5 - Visual5\n6 - Compare a selected country\'s urban/rural population over a selected time period\nQ - Quit\n\nSelect: ")
+    print("\n----- DATA VISUALISATION OF GLOBAL POPULATION (URBAN/RURAL/TOTAL) -----\n\n--------------------------------- MENU --------------------------------\n")
+    #allow user to select a program
+    choice = input("1 - Smallest urban population countries of a selected year\n2 - Compare a selected country \'s total population between years\n3 - Smallest total population Countries\n4 - Compare two countries total population over a time period.\n5 - Countries with the Biggest Total Population in a selected year\n6 - Compare a selected country\'s urban/rural population over a selected time period\nQ - Quit\n\nSelect an option from the above options: ")
     choice = choice.upper()
 
     if choice == "1":
-        print("calls function of visual 1")
+        print(f"\n\nYou have selected option{choice}\n")
+        #Add visualisation function here
         
     elif choice ==  "2":
-        print("calls function of visual 2")
+        print(f"\n\nYou have selected option{choice}\n")
+        #Add visualisation function here
         
     elif choice ==  "3":
-        print("calls function of visual 3")
+        print(f"\n\nYou have selected option{choice}\n")
+        #Add visualisation function here
         
     elif choice ==  "4":
+        print(f"\n\nYou have selected option{choice}\n")
         comparingCountries()
-        break
         
     elif choice ==  "5":
+        print(f"You have selected option{choice}")
         print("calls function of visual 5")
         
     elif choice ==  "6":
+        print(f"You have selected option{choice}")
         compareUrbanRural()
         
     elif choice ==  "Q":
@@ -219,5 +260,4 @@ while (True):
         exit()
         
     else:
-        print(f"\nInvalid input:{choice}, select one of the choices provided\n")
-        continue
+        print(f"\nInvalid input: \'{choice}\', select one of the choices provided\n")
