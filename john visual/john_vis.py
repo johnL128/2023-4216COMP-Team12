@@ -5,7 +5,7 @@ import matplotlib.patches as mpatches
 w_df = pd.read_csv("csv/world.csv")
 ut_df = pd.read_csv("csv/urban_total.csv")
 
-print(f"\n--- Compare a selected country’s urban/rural population over a selected time period ---")
+print(f"\n--- Compare a selected country\'s urban/rural population over a selected time period ---")
 print(f"\n--- Enter \'Q\' to quit the program ---")
 
 while (True):
