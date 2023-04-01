@@ -9,14 +9,14 @@ To access each individual visualisation, the user will need to select a number t
 
 Each visualisation is listed in chronological order, according to the menu provided in the program (1-6):
 
-| Menu Option  | Author |
-| ------------- | ------------- |
-| 1. Smallest urban population countries of a selected year  | **Chinell** |
-| 2. Compare a selected country's total population between years  | **Dara** |
-| 3. Smallest total population Countries | **Adina** |
-| 4. Compare two countries total population over a time period | **Adun** |
-| 5. Countries with the Biggest Total Population in a selected year | **Ella** |
-| 6. Compare a selected country\'s urban/rural population over a selected time period | **John** |
+| Menu Option | Option Description  | Author |
+|----|------------- | ------------- |
+|1| Smallest urban population countries of a selected year  | **Chinell** |
+|2| Compare a selected country's total population between years  | **Dara** |
+|3| Smallest total population Countries | **Adina** |
+|4| Compare two countries total population over a time period | **Adun** |
+|5| Countries with the Biggest Total Population in a selected year | **Ella** |
+|6| Compare a selected country\'s urban/rural population over a selected time period | **John** |
 
 ### Chinell
 Add short description of how visualisation works
