@@ -2,8 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-w_df = pd.read_csv("csv/world.csv")
 ut_df = pd.read_csv("csv/urban_total.csv")
+w_df = pd.read_csv("csv/world.csv")
 
 print(f"\n--- Compare a selected country\'s urban/rural population over a selected time period ---")
 print(f"\n--- Enter \'Q\' to quit the program ---")
