@@ -42,9 +42,12 @@ while (True):
     else:
         print(f"\n{s_year} doesn't exist in this database!")
 
-#GATHER DATA
+#GATHER DATA, SET PARAMETERS TO AVOID NaN VALUES
+wrl = w_df.loc[w_df["Country Code"] == sel_code, s_year:s_year2]
 ut = ut_df.loc[ut_df["Country Code"] == sel_code, s_year:s_year2]
-rur = w_df.loc[w_df["Country Code"] == sel_code, s_year:s_year2] - ut
+wrl.reset_index(drop=True, inplace=True)
+ut.reset_index(drop=True, inplace=True)
+rur = wrl - ut
 
 while (True):
     try:
@@ -58,37 +61,36 @@ while (True):
     
     if graph_choice == 1:
         fig, ax = plt.subplots(graph_choice)
-        ax.plot(ut.columns.T.all, ut.values.T.all, 'r')
-        ax.plot(rur.columns.T.all, rur.values.T.all, 'b')
+        ax.plot(ut.columns.T, ut.values.T, 'r')
+        ax.plot(rur.columns.T, rur.values.T, 'b')
         ax.get_yaxis().get_major_formatter().set_scientific(False)
         ax.tick_params('x',labelrotation=90)
+        fig.supxlabel("Years", fontsize=20)
+        fig.supylabel("Population", fontsize=20)
+        fig.suptitle(f"Urban and Rural Comparison for {cou_name} between {s_year}-{s_year2}", fontsize=20)
+        
         #Set legend
         urb_leg = mpatches.Patch(color='red', label='Urban Population')
         rur_leg = mpatches.Patch(color='blue', label='Rural Population')
         ax.legend(handles=[urb_leg, rur_leg])
-        
-        fig.supxlabel("Years", fontsize=20)
-        fig.supylabel("Population", fontsize=20)
-        fig.suptitle(f"Urban and Rural Comparison for {cou_name} between {s_year}-{s_year2}", fontsize=20)
-        ax.grid()
         break
     
     elif graph_choice == 2:
         fig, ax = plt.subplots(graph_choice)
         ax[0].plot(ut.columns.T, ut.values.T, 'r')
-        ax[0].set_title(f"Urban Data for {cou_name}", fontsize=20)
+        ax[0].set_title(f"Urban Data for {cou_name} between {s_year}-{s_year2}", fontsize=20)
         ax[1].plot(rur.columns.T, rur.values.T, 'b')
-        ax[1].set_title(f"Rural Data for {cou_name}", fontsize=20)
+        ax[1].set_title(f"Rural Data for {cou_name} between {s_year}-{s_year2}", fontsize=20)
         
         #format both graphs
         for i in range(graph_choice):
             ax[i].get_yaxis().get_major_formatter().set_scientific(False)
             ax[i].tick_params('x',labelrotation=90)
-            ax[i].set_xlabel("Years", fontsize=20)
-            ax[i].set_ylabel("Population", fontsize=20)
+            ax[i].set_xlabel("Years", fontsize=18)
+            ax[i].set_ylabel("Population", fontsize=18)
             ax[i].grid()
             
-        fig.tight_layout()
+        plt.tight_layout()
         break
     
     else: 
