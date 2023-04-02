@@ -52,7 +52,7 @@ rur = wrl - ut
 while (True):
     try:
         print("\nSelect a visualisation option:")
-        graph_choice = int(input("\n1 - Compare Urban and Rural\n2 - Urban and Rural Population ONLY\nChoice: "))
+        graph_choice = int(input("\n1 - Compare Urban and Rural\n2 - Urban and Rural Population ONLY\n\nChoice: "))
     
     except ValueError as ve:
         print(f"\nInvalid choice, it must be a NUMBER!")
@@ -63,6 +63,7 @@ while (True):
         fig, ax = plt.subplots(graph_choice)
         ax.plot(ut.columns.T, ut.values.T, 'r')
         ax.plot(rur.columns.T, rur.values.T, 'b')
+        #removes scientific values and uses "large numbers" instead
         ax.get_yaxis().get_major_formatter().set_scientific(False)
         ax.tick_params('x',labelrotation=90)
         fig.supxlabel("Years", fontsize=20)
@@ -77,10 +78,10 @@ while (True):
     
     elif graph_choice == 2:
         fig, ax = plt.subplots(graph_choice)
-        ax[0].plot(ut.columns.T, ut.values.T, 'r')
-        ax[0].set_title(f"Urban Data for {cou_name} between {s_year}-{s_year2}", fontsize=20)
-        ax[1].plot(rur.columns.T, rur.values.T, 'b')
-        ax[1].set_title(f"Rural Data for {cou_name} between {s_year}-{s_year2}", fontsize=20)
+        ax[0].set_title(f"Urban Data for {cou_name} between {s_year}-{s_year2}", fontsize=18)
+        ax[0].scatter(x = ut.columns.T, y = ut.values.T, marker = 'x', c = '#FF0000')
+        ax[1].set_title(f"Rural Data for {cou_name} between {s_year}-{s_year2}", fontsize=18)   
+        ax[1].scatter(x = rur.columns.T, y = rur.values.T, marker = 'x', c = '#0000FF')
         
         #format both graphs
         for i in range(graph_choice):
