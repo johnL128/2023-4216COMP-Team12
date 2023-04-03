@@ -2,7 +2,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-data = pd.read_csv("csv/world.csv")
+data = pd.read_csv("csv/urban_percent.csv")
 print(data)
 
 while(True):
@@ -45,8 +45,8 @@ font1 = {'family':'serif','color':'blue','size':20}
 font2 = {'family':'serif','color':'darkred','size':15}
 
 plt.xlabel("Year",fontdict = font1)
-plt.ylabel("Population",fontdict = font1)
-plt.title(f"{x},{y} - {z} Population",fontdict = font2)
+plt.ylabel("Urban%",fontdict = font1)
+plt.title(f"{x},{y} - {z} Urban% population",fontdict = font2)
 plt.grid()
 plt.show()
 
