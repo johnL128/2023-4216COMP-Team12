@@ -12,7 +12,7 @@ Each visualisation is listed in chronological order, according to the menu provi
 | Menu Option | Option Description  | Author |
 |----|------------- | ------------- |
 |1| Smallest urban population countries of a selected year  | **Chinell** |
-|2| Compare a selected country's total population between years  | **Dara** |
+|2| Compare a selected country's Urban Percentage total population between years  | **Dara** |
 |3| Smallest total population Countries | **Adina** |
 |4| Compare two countries total population over a time period | **Adun** |
 |5| Countries with the Biggest Total Population in a selected year | **Ella** |
@@ -22,7 +22,7 @@ Each visualisation is listed in chronological order, according to the menu provi
 Add short description of how visualisation works
 
 ### Dara
-Add short description of how visualisation works
+The user will be asked to pick a country that is in the list and after they will pick the two years they would like to comapre and once they do that the data is collected and then hence plotted on a scatter graph allowing the user to see an increase or decreas in poulation and in what specific time zone.
 
 ### Adina
 Add short description of how visualisation works
