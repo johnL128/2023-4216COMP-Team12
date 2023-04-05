@@ -79,21 +79,23 @@ def urbanPercentTime():
 
 
 #Adina's Visualisation
-r_vfp = pd.read_csv ("csv/region_world.csv") 
-while (True):
-     user_input = input ("What year?")   
-     if user_input >= "1960" and user_input <= "2020": 
-          break
-     else: 
-          print ("The year entered is invalid. Please enter a year between 1960 and 2020")
-year2 = r_vfp.nsmallest (10, user_input)
-print(year2[["Region Name", "Region Code", user_input]]) 
-year2.plot(x = "Region Code", y= user_input, kind = "bar", legend = None)
-plt.xlabel ("Region Code", fontsize = 12)
-plt.xticks ( fontsize = 8)
-plt.ylabel ("Region Population", fontsize = 12)
-plt.title (f"10 Smallest Regions of {user_input}", fontsize = 14)
-plt.show()
+def rpopulatio():
+    
+    r_vfp = pd.read_csv ("csv/region_world.csv") #
+    while (True):#
+        user_input = input ("What year?")   
+        if user_input >= "1960" and user_input <= "2020": 
+            break
+        else: 
+            print ("The year entered is invalid. Please enter a year between 1960 and 2020")
+    year2 = r_vfp.nsmallest (10, user_input)
+    print(year2[["Region Name", "Region Code", user_input]]) 
+    year2.plot(x = "Region Code", y= user_input, kind = "bar", legend = None)
+    plt.xlabel ("Region Code", fontsize = 12)
+    plt.xticks ( fontsize = 8)
+    plt.ylabel ("Region Population", fontsize = 12)
+    plt.title (f"10 Smallest Regions of {user_input}", fontsize = 14)
+    plt.show()
 
 
 
@@ -307,7 +309,7 @@ def compareUrbanRural():
 while (True):
     print("\n----- DATA VISUALISATION OF GLOBAL POPULATION (URBAN/RURAL/TOTAL) -----\n\n--------------------------------- MENU --------------------------------\n")
     #allow user to select a program
-    choice = input("1 - Smallest urban population countries of a selected year\n2 - Compare a selected country \'s total population between years\n3 - Smallest total population Countries\n4 - Compare two countries total population over a time period.\n5 - Countries with the Biggest Total Population in a selected year\n6 - Compare a selected country\'s urban/rural population over a selected time period\nQ - Quit\n\nSelect an option from the above options: ")
+    choice = input("1 - Smallest urban population countries of a selected year\n2 - Compare a selected country \'s total population between years\n3 - Smallest Regions total population \n4 - Compare two countries total population over a time period.\n5 - Countries with the Biggest Total Population in a selected year\n6 - Compare a selected country\'s urban/rural population over a selected time period\nQ - Quit\n\nSelect an option from the above options: ")
     choice = choice.upper()
 
     if choice == "1":
@@ -320,7 +322,7 @@ while (True):
         
     elif choice ==  "3":
         print(f"\n\nYou have selected option{choice}\n")
-        #Add visualisation function here
+        rpopulatio()
         
     elif choice ==  "4":
         print(f"\n\nYou have selected option{choice}\n")
