@@ -9,7 +9,33 @@ while (True):
           print ("The year entered is invalid. Please enter a year between 1960 and 2020")
 year2 = r_vfp.nsmallest (10, user_input)
 print(year2[["Region Name", "Region Code", user_input]]) 
-year2.plot(x = "Region Code", y= user_input, kind = "bar", legend = None)
+
+while (True):
+    print("Chose what graph you would like to view the data with:")
+    #allow user to select a program
+    choice = input("1 - scatter Graph \n2 - Pie Graph \n3 - Bar Chart\nselect: ")
+    choice = choice.upper()
+
+    if choice == "1":
+        print(f"\n\nYou have selected option {choice}\n")
+        year2.plot(x = "Region Code", y= user_input, kind = "scatter", legend = None)
+        break
+        
+    elif choice ==  "2":
+        print(f"\n\nYou have selected option {choice}\n")
+        break
+        
+        
+    elif choice ==  "3":
+        print(f"\n\nYou have selected option {choice}\n")
+        year2.plot(x = "Region Code", y= user_input, kind = "bar", legend = None)
+        break
+    
+    else:
+        print("Error")
+       
+
+
 plt.xlabel ("Region Code", fontsize = 12)
 plt.xticks ( fontsize = 8)
 plt.ylabel ("Region Population", fontsize = 12)
