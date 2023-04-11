@@ -25,10 +25,10 @@ Add short description of how visualisation works
 The user will be asked to pick a country that is in the list and after they will pick the two years they would like to comapre and once they do that the data is collected and then hence plotted on a scatter graph allowing the user to see an increase or decreas in poulation and in what specific time zone.
 
 ### Adina
-The program that i have build works by asking the user to input a year of choice to make the graph, and it will show the 10 regions with the smallest population in the year selected. 
+The program that i have build works by asking the user to input a year of choice and what graph they want to use to analize the data view, and it will show the 10 regions with the smallest population in the year selected with the graph selected. 
 
 ### Adun
-Add short description of how visualisation works
+The User will be given the option of choosing two countries, and if the countries are in the database, the user will then proceed to choosing a time period which the program will make a line graph explaining the data.
 
 ### Ella
 Add short description of how visualisation works
