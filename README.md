@@ -31,7 +31,7 @@ The program that i have build works by asking the user to input a year of choice
 The User will be given the option of choosing two countries, and if the countries are in the database, the user will then proceed to choosing a time period which the program will make a line graph explaining the data.
 
 ### Ella
-Add short description of how visualisation works
+The user will be asked to pick a year of their choice between 1960-2020 and it will show the data on a bar chart with the 10 countries with the biggest population in that selected year. 
 
 ### John
 When the user accesses my section of the program, a number of questions will be asked in order to filter according to the requirements of the user. This will begin with asking for the country code, then asking for a beginning and end year **(1960-2020)** in order to take the neccessary data needed to plot. The program will then ask for a type of visualisation, either displaying seperate scatter graphs showing urban and rural individually, or a comparison line graph. The terminal will then print a statement providing the user with the data they requested for alongside the visualisation(s).
