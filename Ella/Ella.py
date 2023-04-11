@@ -17,8 +17,13 @@ var = df.nlargest(10,n)
 
 print(var[["Country Name", "Country Code", n]])
 
+
 var.plot(x="Country Code", y=n, kind='bar')
-plt.xlabel ("Country ", fontsize =12) 
+
+plt.xlabel ("Country Code ", fontsize =20) 
+
 plt.xticks (fontsize = 8)
+
 plt.title(f"Countries with the biggest population in {n}", fontsize = 20)
+
 plt.show()
