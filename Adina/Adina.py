@@ -13,7 +13,7 @@ print(year2[["Region Name", "Region Code", user_input]])
 while (True):
     print("Chose what graph you would like to view the data with:")
     #allow user to select a program
-    choice = input("1 - scatter Graph \n2 - Pie Graph \n3 - Bar Chart\nselect: ")
+    choice = input("1 - Scatter Graph \n2 - Pie Graph \n3 - Bar Chart\nselect: ")
     choice = choice.upper()
 
     if choice == "1": 
