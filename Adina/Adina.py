@@ -16,28 +16,31 @@ while (True):
     choice = input("1 - scatter Graph \n2 - Pie Graph \n3 - Bar Chart\nselect: ")
     choice = choice.upper()
 
-    if choice == "1":
+    if choice == "1": 
         print(f"\n\nYou have selected option {choice}\n")
         year2.plot(x = "Region Code", y= user_input, kind = "scatter", legend = None)
+        plt.xlabel ("Region Code", fontsize = 12)
+        plt.xticks ( fontsize = 8)
+        plt.ylabel ("Region Population", fontsize = 12)
         break
         
     elif choice ==  "2":
         print(f"\n\nYou have selected option {choice}\n")
+        plt.figure(figsize=(8,6))
+        plt.pie(year2 [:10][user_input], labels=year2 ['Region Name'], colors=['red', 'pink', 'yellow', 'blue', 'green', 'black', 'purple', 'orange', 'turquoise', 'indigo'])
         break
         
         
     elif choice ==  "3":
         print(f"\n\nYou have selected option {choice}\n")
         year2.plot(x = "Region Code", y= user_input, kind = "bar", legend = None)
+        plt.xlabel ("Region Code", fontsize = 12)
+        plt.xticks ( fontsize = 8)
+        plt.ylabel ("Region Population", fontsize = 12)
         break
     
     else:
         print("Error")
        
-
-
-plt.xlabel ("Region Code", fontsize = 12)
-plt.xticks ( fontsize = 8)
-plt.ylabel ("Region Population", fontsize = 12)
 plt.title (f"10 Smallest Regions of {user_input}", fontsize = 14)
 plt.show()
