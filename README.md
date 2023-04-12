@@ -19,7 +19,7 @@ Each visualisation is listed in chronological order, according to the menu provi
 |6| Compare a selected country\'s urban/rural population over a selected time period | **John** |
 
 ### Chinell
-Add short description of how visualisation works
+The programme reads a CSV file containing urban population data and uses pandas to filter and sort the data. My fraction of the programme is to prompt the user to select a year between 1960 and 2020 and display the top 5 smallest urban populations for the selected year. The program sorts the data and displays the results in a table. The user can also visualise the data using a bar or pie chart. Finally, the program allows the user to exit or go back to the main menu.
 
 ### Dara
 The user will be asked to pick a country that is in the list and after they will pick the two years they would like to comapre and once they do that the data is collected and then hence plotted on a scatter graph allowing the user to see an increase or decreas in poulation and in what specific time zone.
