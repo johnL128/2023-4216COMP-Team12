@@ -14,7 +14,7 @@ while (True):
 while (True):
     n_year2 = input("\nEnter another year:")
     
-    if n_year >= "2020 and n_year<= "1960" and n_year2 != n_year and n_year2 > n_year:
+    if n_year >= "2020" and n_year<= "1960" and n_year2 != n_year and n_year2 > n_year:
         break
         
         else:
