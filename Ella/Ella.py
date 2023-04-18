@@ -11,7 +11,15 @@ while (True):
         break
     else:
         print("Error Message")
-
+while (True):
+    n_year2 = input("\nEnter another year:")
+    
+    if n_year >= "2020 and n_year<= "1960" and n_year2 != n_year and n_year2 > n_year:
+        break
+        
+        else:
+            print(f"\n{n_year} error message")
+        
 #pandas manipulation
 var = df.nlargest(10,n)
 
