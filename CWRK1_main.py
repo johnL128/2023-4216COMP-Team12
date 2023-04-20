@@ -74,7 +74,7 @@ def smallestPop():
 
 #Dara's Visualisation
 def urbanPercentTime():
-    #Compare a selected country‘s Urban total population between years
+    #Compare a selected country‘s Urban % total population between years
     import pandas as pd
     import matplotlib.pyplot as plt
 
@@ -262,34 +262,33 @@ def comparingCountries():
 
 #Ella's Visualisation
 #Countries with the biggest total population in a selected year
-import pandas as pd
-import matplotlib.pyplot as plt 
 
-df = pd.read_csv ("csv/world.csv")
-print (f"\n---Countries with the biggest population in a selected year---")
+def bigTotal():
+    df = pd.read_csv ("csv/world.csv")
+    print (f"\n---Countries with the biggest population in a selected year---")
 
-while (True):
-    n = input(f"\n Enter a year between 1960 and 2020 and view the top 10 countries with the biggest total population")
-    if n <= "2020" and n >="1960":
-        break
-    else:
-        print("Error Message")
+    while (True):
+        n = input(f"\n Enter a year between 1960 and 2020 and view the top 10 countries with the biggest total population")
+        if n <= "2020" and n >="1960":
+            break
+        else:
+            print("Error Message")
 
-#pandas manipulation
-var = df.nlargest(10,n)
+    #pandas manipulation
+    var = df.nlargest(10,n)
 
-print(var[["Country Name", "Country Code", n]])
+    print(var[["Country Name", "Country Code", n]])
 
 
-var.plot(x="Country Code", y=n, kind='bar')
+    var.plot(x="Country Code", y=n, kind='bar')
 
-plt.xlabel ("Country Code ", fontsize =20) 
+    plt.xlabel ("Country Code ", fontsize =20) 
 
-plt.xticks (fontsize = 8)
+    plt.xticks (fontsize = 8)
 
-plt.title(f"Countries with the biggest population in {n}", fontsize = 20)
+    plt.title(f"Countries with the biggest population in {n}", fontsize = 20)
 
-plt.show()
+    plt.show()
 
 
 
@@ -428,27 +427,27 @@ while (True):
     choice = choice.upper()
 
     if choice == "1":
-        print(f"\n\nYou have selected option{choice}\n")
+        print(f"\n\nYou have selected option {choice}\n")
         smallestPop()
         
     elif choice ==  "2":
-        print(f"\n\nYou have selected option{choice}\n")
+        print(f"\n\nYou have selected option {choice}\n")
         urbanPercentTime()
         
     elif choice ==  "3":
-        print(f"\n\nYou have selected option{choice}\n")
+        print(f"\n\nYou have selected option {choice}\n")
         rpopulatio()
         
     elif choice ==  "4":
-        print(f"\n\nYou have selected option{choice}\n")
+        print(f"\n\nYou have selected option {choice}\n")
         comparingCountries()
         
     elif choice ==  "5":
-        print(f"You have selected option{choice}")
-        print("calls function of visual 5")
+        print(f"You have selected option {choice}")
+        bigTotal()
         
     elif choice ==  "6":
-        print(f"You have selected option{choice}")
+        print(f"You have selected option {choice}")
         compareUrbanRural()
         
     elif choice ==  "Q":
