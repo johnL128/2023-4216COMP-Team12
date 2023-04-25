@@ -8,8 +8,6 @@ import matplotlib.patches as mpatches
 #Chinells's Visualisation
 
 def smallestPop():
-    import pandas as pd
-    import matplotlib.pyplot as plt
 
     cf = pd.read_csv('csv/urban_total.csv')
 
@@ -301,9 +299,6 @@ def bigTotal():
 
 #John's Visualisation
 def compareUrbanRural():
-    import pandas as pd
-    import matplotlib.pyplot as plt
-    import matplotlib.patches as mpatches
 
     ut_df = pd.read_csv("csv/urban_total.csv")
     w_df = pd.read_csv("csv/world.csv")
