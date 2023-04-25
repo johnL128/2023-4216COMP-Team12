@@ -73,8 +73,6 @@ def smallestPop():
 #Dara's Visualisation
 def urbanPercentTime():
     #Compare a selected country‘s Urban % total population between years
-    import pandas as pd
-    import matplotlib.pyplot as plt
 
     data = pd.read_csv("csv/urban_percent.csv")
     print(data)

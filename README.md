@@ -11,9 +11,9 @@ Each visualisation is listed in chronological order, according to the menu provi
 
 | Menu Option | Option Description  | Author |
 |----|------------- | ------------- |
-|1| Smallest urban population countries of a selected year  | **Chinell** |
+|1| 5 Smallest urban population countries of a selected year  | **Chinell** |
 |2| Compare a selected country's Urban Percentage total population between years  | **Dara** |
-|3| Smallest total population Countries | **Adina** |
+|3| 5 Smallest regions (total population) | **Adina** |
 |4| Compare two countries total population over a time period | **Adun** |
 |5| Countries with the Biggest Total Population in a selected year | **Ella** |
 |6| Compare a selected country\'s urban/rural population over a selected time period | **John** |
